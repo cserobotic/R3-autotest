@@ -56,7 +56,7 @@ parseall() {
     cat $CACHE_FILE
 }
 
-parseall | python $PROCESS $* >>$RESULT
+parseall | python3 $PROCESS $* >>$RESULT
 
 if [ $SPINNER_PID -gt 0 ]; then
     exec 2>/dev/null
